@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>APUM</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!--Tag.Start-->
+<!--headercss-->
+<!--Tag.End-->
+<style>
+</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../index.php" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>AP</b>UM</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>APUM</b></span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <!--Tag.Start-->
+            <!--userinfo-->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../dist/img/aruba.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Aruba</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src="../dist/img/aruba.jpg" class="img-circle" alt="User Image">
+                <p>
+                  Aruba
+                  <small>Company since 2002</small>
+                </p>
+              </li>
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+              </li>
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+            <!--Tag.End-->
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <!--
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <div class="user-panel">
+        <!--Tag.Start-->
+        <!--sidebaruser-->
+        <div class="pull-left image">
+          <img src="../dist/img/aruba.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Aruba</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+        <!--Tag.End-->
+      </div>
+      <!-- search form -->
+      <!-- /.search form -->
+
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">功能導航列</li>
+        <!--Tag.Start-->
+        <!--sidebarmenu-->
+        <li>
+          <a href="../index.php">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="../history/history_list.php">
+            <i class="fa fa-database"></i> <span>歷史紀錄</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="../history/location_list.php">
+            <i class="fa fa-server"></i> <span>即時點位</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <!--Tag.End-->
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <!--Tag.Start-->
+      <!--contantheader-->
+      <h1>
+        歷史紀錄
+        <small>無線使用者地圖</small>
+      </h1>
+      <!--Tag.End-->
+      <ol class="breadcrumb">
+        <!--Tag.Start-->
+        <!--contantbreadcrumb-->
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">歷史紀錄</li>
+        <!--Tag.End-->
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">歷史紀錄查詢</h3>
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="">
+              <i class="fa fa-minus"></i></button>
+            <!-- <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button> -->
+          </div>
+        </div>
+        <div class="box-body">
+          <form role="form" id="w" name="w" action="history_list.php" method="POST"> 
+            <!--Tag.Start-->
+            <!--search-->
+            <div class="form-group">
+              <label for="Qmacaddr">MAC位址</label>
+              <input type="text" class="form-control" id="Qmacaddr" name="Qmacaddr" placeholder="查詢多筆請用,分隔" value="$Qmacaddr">
+            </div>
+            <button type="submit" class="btn btn-primary ">查詢</button>
+            <!--Tag.End-->
+          </form>
+        </div>
+        <!-- <div class="box-footer"></div> -->
+      </div>
+
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">共 $cnt2 筆(每頁 $cnt1 筆)</h3>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <tr>
+              <th>建立時間</th><!-- style="width: 10px" -->
+              <th>更新時間</th>
+              <th>MAC位址</th>
+              <th>X軸位置</th>
+              <th>Y軸位置</th>
+              <th>是否連線</th>
+            </tr>
+            <!--Tag.Start-->
+            <!--report-->
+            <tr>
+              <td>$createtime</td>
+              <td>$updatetime</td>
+              <td>$sta_eth_mac</td>
+              <td>$sta_location_x</td>
+              <td>$sta_location_y</td>
+              <td>$associated</td>
+            </tr>
+            <!--Tag.End-->
+          </table>
+        </div>
+        <div class="box-footer clearfix">
+          <!--Tag.Start-->
+          <!--pagination-->
+          <!--Tag.End-->
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <!-- <b>Version</b> 2.4.18 -->
+    </div>
+    <!--Tag.Start-->
+    <!--copyright-->
+    <!--Tag.End-->
+  </footer>
+
+  <!-- Control Sidebar -->
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!--Tag.Start-->
+<!--footerjs-->
+<!--Tag.End-->
+
+<script>
+  $(document).ready(function (){
+    //$('.sidebar-menu').tree()
+  });
+</script>
+</body>
+</html>
